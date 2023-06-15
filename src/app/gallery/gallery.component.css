@@ -1,0 +1,28 @@
+
+.gallery-container .btn {
+    margin-right: 5px;
+}
+
+ul.images-list {
+  padding: 0;
+  margin: 20px auto;
+}
+
+ul.images-list li {
+  display: inline;
+}
+
+.image-thumb {
+  width: 100%;
+  height: 300px;
+  margin: 6px;
+  border: 4px solid #EEE;
+  box-shadow: #555 1px 1px 8px 1px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .image-thumb {
+    height: 200px;
+  }
+}

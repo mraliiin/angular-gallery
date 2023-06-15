@@ -1,0 +1,15 @@
+<div class="col-xs-12">
+  <h2>{{title}}</h2>
+</div>
+
+<div class="col-xs-12 gallery-container">
+  <button *ngFor="let cat of categories" class="btn btn-xs btn-info" [ngClass]="{'active' : filterBy == cat}" (click)="filterBy=cat">{{cat}}</button>
+
+  <ul class="images-list">
+    <li *ngFor="let image of (images | imageFilter: filterBy)" class="col-xs-6 col-sm-4">
+        <a [routerLink] = "['/image', image.id]">
+            <img src="./assets/{{image.url}}" class="image-thumb"/>
+        </a>
+    </li>
+  </ul>
+</div>
